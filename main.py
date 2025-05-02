@@ -86,7 +86,7 @@ async def webhook(request: Request):
     return {"ok": True}
 
 async def on_startup():
-    webhook_url = "https://your-domain.com/webhook"
+    webhook_url = "https://web-production-0d58.up.railway.app/webhook"
     await bot.set_webhook(webhook_url)
 
 if __name__ == "__main__":
