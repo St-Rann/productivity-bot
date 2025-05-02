@@ -1,3 +1,4 @@
+
 import os
 import asyncio
 import sqlite3
@@ -92,4 +93,4 @@ async def on_startup():
 if __name__ == "__main__":
     import uvicorn
     asyncio.get_event_loop().run_until_complete(on_startup())
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
